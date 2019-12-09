@@ -1,18 +1,17 @@
 import React from 'react';
 import s from './Content.module.css'
-import Description from "./description/Description";
-import Desktop from "./desktop/Desktop";
+import DesktopContainer from "./main/desktop/DesktopContainer";
+import DescriptionContainer from "./main/description/DescriptionContainer";
 
 class Content extends React.Component{
 
     render() {
         return (
             <div className={s.content}>
-                <Desktop/>
-                <Description/>
+                <DesktopContainer/>
+                <DescriptionContainer/>
             </div>
         )
     }
 }
-
 export default Content;

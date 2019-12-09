@@ -3,9 +3,13 @@ import s from './Header.module.css'
 
 class Header extends React.Component{
 
-    render() {
+
+
+    render = () => {
         return (
-            <header className={s.header}>header</header>
+            <header className={s.header}>
+                <button>Сохранить</button>
+            </header>
         )
     }
 

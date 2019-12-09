@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Interactiv.module.css'
-import Notes from "./notes/Notes";
 import Screen from "./screen/Screen";
+import NotesContainer from "./notes/NotesContainer";
 
 
 class Interactiv extends React.Component{
@@ -10,7 +10,7 @@ class Interactiv extends React.Component{
         return (
             <div className={s.interactive}>
                 <Screen/>
-                <Notes/>
+                <NotesContainer />
             </div>
 
         )

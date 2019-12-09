@@ -4,7 +4,7 @@
 
     display: grid;
 
-    grid-template-areas: "header header header" "nav content interactive" "footer footer footer";
+    grid-template-areas: "header header" "nav main" "footer footer";
     grid-template-rows: 60px 1fr 60px;
-    grid-template-columns: 2fr 7fr 3fr;
+    grid-template-columns: 2fr 8fr;
 }
