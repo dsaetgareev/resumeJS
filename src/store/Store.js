@@ -1,14 +1,14 @@
 import {combineReducers, createStore} from "redux";
-import navReducer from "./reducers/nav/NavbarReducer";
 import desktopReducer from "./reducers/desktop/DesktopReducer";
 import descriptionReducer from "./reducers/desktop/DescriptionReducer";
 import notesReducer from "./reducers/desktop/NotesReducer";
+import dataBaseReducer from "./reducers/desktop/DataBaseReducer";
 
 let reducers = combineReducers({
-    navPage: navReducer,
     desktopPage: desktopReducer,
     descPage: descriptionReducer,
-    notesPage: notesReducer
+    notesPage: notesReducer,
+    pages: dataBaseReducer
 });
 
 let store = createStore(reducers);

@@ -12,7 +12,6 @@ class Notes extends React.Component{
     };
 
     render() {
-        debugger
         return (
             <div className={s.notes}>
                 <DescBody updateDesc={this.props.updateNotes}

@@ -3,8 +3,11 @@ import {connect} from "react-redux";
 import Navbar from "./Navbar";
 
 let mapStateToProps = (state) => {
+    let navs = state.pages.map((item) => {
+        return item.navPage.navItem
+    })
     return {
-        navPage: state.navPage,
+        navPages: navs,
     }
 };
 let mapDispatchToProps = (dispatch) => {

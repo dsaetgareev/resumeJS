@@ -1,3 +1,5 @@
+
+
 const ADD_NAV_ITEM = 'ADD_NAV_ITEM';
 const UPDATE_TEXT = 'UPDATE_TEXT';
 
@@ -10,7 +12,6 @@ let initState = {
 };
 
 const navReducer = (state = initState, action) => {
-debugger
     switch (action.type) {
         case ADD_NAV_ITEM:
             let item =

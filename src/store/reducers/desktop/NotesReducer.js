@@ -27,7 +27,6 @@ const notesReducer = (state = initState, action = {}) => {
             updateBodyCopyState.notesPage.notes = action.newNotes;
             return updateBodyCopyState;
         case CHANGE_NOTES_EDITABLE:
-            debugger
             let updateEditableCopyState = {...state};
             updateEditableCopyState.notesPage.notes = action.newNotes;
             updateEditableCopyState.notesPage.editable = action.newEditable;
