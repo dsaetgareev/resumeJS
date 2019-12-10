@@ -39,6 +39,7 @@ let dataBaseReducer = (state = pages, action) => {
 
     switch (action.type) {
         case ADD_PAGE:
+            const id = `f${(~~(Math.random()*1e8)).toString(16)}`;
             let copyState = [...state];
             let temp = {
                 descPage: action.descPage,
@@ -51,6 +52,11 @@ let dataBaseReducer = (state = pages, action) => {
                     }
                 }
             };
+            temp.desktopPage.id = id;
+            temp.descPage.id = id;
+            temp.notesPage.id = id;
+            temp.navPage.navItem.id = id;
+            debugger
             if (!copyState.find((item) => item.navPage.navItem.name === action.desktopPage.heading)) {
                 copyState.push(temp);
             }

@@ -2,6 +2,7 @@ const ADD_DESKTOP = 'ADD_DESKTOP';
 const UPDATE_HEADING_TEXT = 'UPDATE_HEADING_TEXT';
 const UPDATE_BODY_TEXT = 'UPDATE_BODY_TEXT';
 const CHANGE_EDITABLE = 'CHANGE_EDITABLE';
+const UPDATE_DESKTOP = 'UPDATE_DESKTOP';
 
 let initState = {
     desktopPage: {
@@ -14,7 +15,7 @@ let initState = {
 };
 
 const desktopReducer = (state = initState, action = {}) => {
-
+debugger
     switch (action.type) {
         case ADD_DESKTOP:
             let addCopyState = {
@@ -40,6 +41,13 @@ const desktopReducer = (state = initState, action = {}) => {
             updateEditableCopyState.desktopPage.body = action.newBody;
             updateEditableCopyState.desktopPage.editable = action.newEditable;
             return updateEditableCopyState;
+        case UPDATE_DESKTOP:
+            let updateDesktopCopyState = {...state};
+            updateDesktopCopyState.desktopPage.id = action.state.id;
+            updateDesktopCopyState.desktopPage.heading = action.state.desktopPage.heading;
+            updateDesktopCopyState.desktopPage.body = action.state.desktopPage.body;
+            updateDesktopCopyState.desktopPage.editable = action.state.desktopPage.editable;
+            return updateDesktopCopyState;
         default:
             return state;
 
@@ -65,12 +73,20 @@ export const updateBodyTextActionCreator = (text) => {
         newText: text
     }
 };
+
 export const updateEditableActionCreator = (headingText, bodyText, editable) => {
     return {
         type: CHANGE_EDITABLE,
         newHeading: headingText,
         newBody: bodyText,
         newEditable: editable
+    }
+};
+
+export const updateDesktopActionCreator = (state) => {
+    return {
+        type: UPDATE_DESKTOP,
+        state: state
     }
 };
 

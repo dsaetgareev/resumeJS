@@ -7,9 +7,15 @@ class NavItem extends React.Component{
         this.value = this.props.value;
     }
 
+    toDesktop = () => {
+        debugger
+        this.props.toDesktop(this.props.id)
+    };
+
     render() {
+        this.value = this.props.value;
         return (
-            <div>{this.value}</div>
+            <div onClick={this.toDesktop}>{this.value}</div>
         )
 
 
