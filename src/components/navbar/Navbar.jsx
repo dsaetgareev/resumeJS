@@ -7,13 +7,14 @@ class Navbar extends React.Component{
 
     constructor(props) {
         super(props);
-        this.items = this.props.navItems.navItems.map((item) => <NavItem id={item.id} value={item.name}/>);
+
     }
 
     render() {
+        debugger
+        this.items = this.props.navPage.navPage.navItems.map((item) => <NavItem id={item.id} value={item.name}/>);
         return (
             <nav className={s.sidebar}>
-                <NavMenu/>
                 {this.items}
             </nav>
         )

@@ -5,6 +5,7 @@ class DescBody extends React.Component{
 
     desc = this.props.desc;
     editable = this.props.editable;
+    title = this.props.title;
 
     refDesc = React.createRef();
 
@@ -21,7 +22,7 @@ class DescBody extends React.Component{
             return (
                 <div>
                     <div>
-                        <p1>Описание:</p1>
+                        <p1>{this.title}</p1>
                     </div>
                     <textarea className={s.c_textaria}
                               value={this.desc}
@@ -33,6 +34,9 @@ class DescBody extends React.Component{
         } else {
             return (
                 <div>
+                    <div>
+                        <p1>{this.title}</p1>
+                    </div>
                     <p>{this.desc}</p>
                 </div>
             )

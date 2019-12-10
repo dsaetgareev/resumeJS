@@ -7,7 +7,7 @@ import {
 } from "../../../../../store/reducers/desktop/NotesReducer";
 
 let mapStateToPropsNotes = (state) => {
-    debugger
+
     return {
         notesPage: state.notesPage
     }

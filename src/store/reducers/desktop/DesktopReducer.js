@@ -18,10 +18,12 @@ const desktopReducer = (state = initState, action = {}) => {
     switch (action.type) {
         case ADD_DESKTOP:
             let addCopyState = {
-                id: 0,
-                editable: true,
-                heading: '',
-                body: ''
+                desktopPage: {
+                    id: 0,
+                    editable: true,
+                    heading: 'Введите заголовок',
+                    body: 'Введите тексе'
+                }
             };
             return addCopyState;
         case UPDATE_HEADING_TEXT:

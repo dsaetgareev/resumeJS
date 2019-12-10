@@ -1,16 +1,15 @@
 import React from 'react';
 import './App.css';
-import Content from "./components/content/Content";
 import Header from "./components/header/Header";
-import Interactiv from "./components/content/main/interactiv/Interactiv";
 import Footer from "./components/footer/Footer";
 import NavbarContainer from "./components/navbar/NavbarContainer";
 import MainContent from "./components/content/main/MainContent";
+import HeaderContainer from "./components/header/HeaderContainer";
 
 function App() {
     return (
         <div className="grid">
-            <Header/>
+            <HeaderContainer />
             <NavbarContainer/>
             <MainContent/>
             <Footer/>

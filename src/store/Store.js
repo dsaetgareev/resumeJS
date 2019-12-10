@@ -5,7 +5,7 @@ import descriptionReducer from "./reducers/desktop/DescriptionReducer";
 import notesReducer from "./reducers/desktop/NotesReducer";
 
 let reducers = combineReducers({
-    navItems: navReducer,
+    navPage: navReducer,
     desktopPage: desktopReducer,
     descPage: descriptionReducer,
     notesPage: notesReducer

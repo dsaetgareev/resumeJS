@@ -6,18 +6,20 @@ let initState = {
     notesPage: {
         id: 1,
         editable: true,
-        notes: 'Введите заметку'
+        notes: 'Введитеddd заметку'
     }
 };
 
 const notesReducer = (state = initState, action = {}) => {
-debugger
+
     switch (action.type) {
         case ADD_NOTES:
             let addCopyState = {
-                id: 0,
-                editable: true,
-                notes: ''
+                notesPage : {
+                    id: 1,
+                    editable: true,
+                    notes: 'Введите заметку'
+                }
             };
             return addCopyState;
         case UPDATE_NOTES_TEXT:
@@ -25,6 +27,7 @@ debugger
             updateBodyCopyState.notesPage.notes = action.newNotes;
             return updateBodyCopyState;
         case CHANGE_NOTES_EDITABLE:
+            debugger
             let updateEditableCopyState = {...state};
             updateEditableCopyState.notesPage.notes = action.newNotes;
             updateEditableCopyState.notesPage.editable = action.newEditable;
@@ -32,6 +35,12 @@ debugger
         default:
             return state;
 
+    }
+};
+
+export const addNotesTextActionCreator = () => {
+    return {
+        type: ADD_NOTES
     }
 };
 

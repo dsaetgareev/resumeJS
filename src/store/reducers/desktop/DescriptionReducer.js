@@ -15,9 +15,11 @@ const descriptionReducer = (state = initState, action = {}) => {
     switch (action.type) {
         case ADD_DESC:
             let addCopyState = {
-                id: 0,
-                editable: true,
-                desc: ''
+                descPage: {
+                    id: 1,
+                    editable: true,
+                    desc: 'Введите описание'
+                }
             };
             return addCopyState;
         case UPDATE_DESC_TEXT:
@@ -32,6 +34,12 @@ const descriptionReducer = (state = initState, action = {}) => {
         default:
             return state;
 
+    }
+};
+
+export const addDescTextActionCreator = () => {
+    return {
+        type: ADD_DESC
     }
 };
 export const updateDescTextActionCreator = (newDesc) => {

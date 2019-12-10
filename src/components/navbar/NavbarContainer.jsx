@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 
 let mapStateToProps = (state) => {
     return {
-        navItems: state.navItems,
+        navPage: state.navPage,
     }
 };
 let mapDispatchToProps = (dispatch) => {
